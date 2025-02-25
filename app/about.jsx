@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <View>
+    <View className="flex-1 justify-center items-center">
       <Text>About Page</Text>
     </View>
   )
