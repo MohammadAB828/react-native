@@ -1,17 +1,16 @@
-import { View, Text, Button } from 'react-native'
+import { View, Text } from 'react-native'
 import React from 'react'
-import { useRouter } from 'expo-router'
-
+import { Link, useRouter } from 'expo-router'
 export default function Blog() {
 
     const router = useRouter();
 
   return (
     <View className="flex-1 justify-center items-center">
-      <Text>Blog Page</Text>
-      <Button className="mx-3" onPress={() => router.push('/blog/1') } title='blog1' />
-      <Button className="mx-3" onPress={() => router.push('/blog/2') } title='blog2' />
-      <Button className="mx-3" onPress={() => router.push('/blog/3') } title='blog3' />
+      <Text className='text-green-700'>Blog Page</Text>
+      <Link className="text-cyan-400 my-3" href={'/blog/1'}>blog1</Link>
+      <Link href={'/blog/2'} className=" text-cyan-500 my-3">blog2</Link>
+      <Link className=" text-blue-500 my-3" href={'/blog/3?name=Ali'}>blog3</Link>
     </View>
   )
 }

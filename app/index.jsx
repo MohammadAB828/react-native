@@ -17,6 +17,10 @@ export default function Index() {
       <Link className=" bg-cyan-300 mt-10 px-5 rounded-lg py-1" href={"/blog"}>
         <Text>Go to Blog Page</Text>
       </Link>
+      <Link className=" bg-cyan-300 mt-10 px-5 rounded-lg py-1" href={"/feel"}>
+        <Text>Go to Feel Page</Text>
+      </Link>
+
     </View>
   );
 }

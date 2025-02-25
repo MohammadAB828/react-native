@@ -1,5 +1,5 @@
 import { Stack, useRouter } from "expo-router";
-import '../global.css';
+import '@/global.css';
 import { Button, Text } from "react-native";
 
 export default function RootLayout() {
@@ -46,6 +46,13 @@ export default function RootLayout() {
         name="blog/index"
         options={{
           headerTitle: "Blog" ,
+          
+        }}
+      />
+      <Stack.Screen
+        name="(tabs)"
+        options={{
+          headerShown: false,
           
         }}
       />
