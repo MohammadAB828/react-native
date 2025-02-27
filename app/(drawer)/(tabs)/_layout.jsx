@@ -20,17 +20,7 @@ export default function TabLayout() {
         headerTintColor: "#fff",
         
       }}>
-        <Tabs.Screen 
-            name='feel'
-            options={{
-                tabBarIcon: ({color}) => (
-                <Feather name="list" size={24} color={color} />
-            ),
-            tabBarLabel: "Feel",
-            headerShown:false,
-           
-            }}
-        />
+        
         
         <Tabs.Screen 
             name='profile'
@@ -40,6 +30,17 @@ export default function TabLayout() {
             ),
             tabBarLabel: "Profile",
             headerTitle: "Profile",
+            }}
+        />
+        <Tabs.Screen 
+            name='feel'
+            options={{
+                tabBarIcon: ({color}) => (
+                <Feather name="list" size={24} color={color} />
+            ),
+            tabBarLabel: "Feel",
+            headerShown:false,
+           
             }}
         />
     </Tabs>
