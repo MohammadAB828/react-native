@@ -3,6 +3,7 @@ import { Tabs, useRouter } from 'expo-router'
 import Feather from '@expo/vector-icons/Feather';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 import { Text } from 'react-native';
+import { DrawerToggleButton } from '@react-navigation/drawer';
 
 export default function TabLayout() {
 
@@ -30,6 +31,7 @@ export default function TabLayout() {
             ),
             tabBarLabel: "Profile",
             headerTitle: "Profile",
+            headerLeft: () => <DrawerToggleButton tintColor="#fff" />
             }}
         />
         <Tabs.Screen 

@@ -16,7 +16,7 @@ export default function RootLayout() {
         color: '#fff',
       },
       headerTitleAlign: "center" ,
-      headerTintColor: "#fff"
+      headerTintColor: "#fff",
       
     }}>
       <Stack.Screen

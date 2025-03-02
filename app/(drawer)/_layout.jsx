@@ -4,6 +4,7 @@ import {
   DrawerContentScrollView,
   DrawerItem,
   DrawerItemList,
+  DrawerToggleButton,
 } from "@react-navigation/drawer";
 import {
   EvilIcons,
@@ -25,6 +26,7 @@ const CustomDrawer = (props) => {
         {...props}
         scrollEnabled={false}
         contentContainerStyle={{ flex: 1 }}
+
       >
         <View style={{padding:10 , flexDirection: 'column', alignContent: 'center' , alignItems: 'center' , rowGap: 10}}>
             <Image 
@@ -97,7 +99,18 @@ export default function DrowLayout() {
           drawerHideStatusBarOnOpen: true,
           drawerActiveBackgroundColor: "#5363df",
           drawerActiveTintColor: "#fff",
-          drawerItemStyle:{borderRadius: 5 ,}
+          drawerInactiveTintColor: "#000",
+          drawerLabelStyle: {fontSize: 16},
+          drawerItemStyle:{borderRadius: 5 ,},
+          headerStyle: {
+            backgroundColor: "#636363" ,
+          },
+          headerTitleStyle:{
+            color: '#fff',
+          },
+          headerTitleAlign: "center" ,
+          headerTintColor: "#fff",
+          
         }}
       >
         <Drawer.Screen
@@ -108,6 +121,7 @@ export default function DrowLayout() {
             drawerIcon: ({ color, size }) => (
               <MaterialIcons name="favorite-border" size={size} color={color} />
             ),
+            headerLeft: () => <DrawerToggleButton tintColor="#fff"  />
           }}
         />
 
@@ -119,6 +133,7 @@ export default function DrowLayout() {
             drawerIcon: ({ color, size }) => (
               <Ionicons name="settings-outline" size={size} color={color} />
             ),
+            headerLeft: () => <DrawerToggleButton tintColor="#fff" />
           }}
         />
 
@@ -130,6 +145,8 @@ export default function DrowLayout() {
             drawerIcon: ({ color, size }) => (
               <Ionicons name="settings-outline" size={size} color={color} />
             ),
+            //headerLeft: () => <DrawerToggleButton />
+            headerShown: false,
           }}
         />
       </Drawer>
