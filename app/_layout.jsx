@@ -1,6 +1,6 @@
 import { Stack, useRouter } from "expo-router";
 import '@/global.css';
-import { Button, Text } from "react-native";
+import { Button, Text, TouchableOpacity } from "react-native";
 
 export default function RootLayout() {
 
@@ -15,15 +15,17 @@ export default function RootLayout() {
       headerTitleStyle:{
         color: '#fff',
       },
-      headerTitleAlign: "center" ,
+      headerTitleAlign: "center",
       headerTintColor: "#fff",
-      
+      statusBarBackgroundColor: "#636363"
     }}>
       <Stack.Screen
         name="index"
         options={{
           headerTitle: "Home" ,
-          headerRight: () => <Text className=" text-white" onPress={() => router.push('contact')} >Contact</Text>
+          headerRight: () => (<TouchableOpacity style={{flexWrap:"wrap"}} onPress={() => router.push('contact')}>
+          <Text className=" text-white" >Contact</Text>
+          </TouchableOpacity>)
         }}
       />
 

@@ -96,7 +96,7 @@ export default function DrowLayout() {
       <Drawer
         drawerContent={(props) => <CustomDrawer {...props} />}
         screenOptions={{
-          drawerHideStatusBarOnOpen: true,
+         // drawerHideStatusBarOnOpen: true,
           drawerActiveBackgroundColor: "#5363df",
           drawerActiveTintColor: "#fff",
           drawerInactiveTintColor: "#000",
